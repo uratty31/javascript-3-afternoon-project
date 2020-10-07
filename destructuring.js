@@ -22,7 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
+const { color, make, model, year } = carDetails;
 
 
 ////////// PROBLEM 2 //////////
@@ -33,9 +33,9 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
+function greeting(obj) {
   //Code Here
-  
+  let { firstName, lastName, title } = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,7 +54,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function totalPopulation(totPop) {
+  let { utah, california, texas, arizona } = totPop;
+  let totalNum = utah + california + texas + arizona;
+  return totalNum;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -68,7 +72,14 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function ingredients(obj) {
+  const { carb, fat, protein } = obj;
+  let newArr = [];
+  newArr.push(carb);
+  newArr.push(fat);
+  newArr.push(protein);
+  return newArr;
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -86,7 +97,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function largeNumbers({first, second, third}){
+  let min = Math.min(first, second, third);
+  return min
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +112,16 @@ function greeting( obj ) {
 */
 
 //Code Here
+function numberGroups({a, b, c}){
+  let longestarr = a;
 
+
+  if (b.length > longestarr.length){
+    longestarr = b;
+  }
+  if (c.length > longestarr.length){
+    longestarr = c;
+  }
+  return longestarr;
+}
 
